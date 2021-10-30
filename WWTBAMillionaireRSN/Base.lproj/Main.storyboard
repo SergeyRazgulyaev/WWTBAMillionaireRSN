@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Menu-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="GameMenuViewController" customModule="WWTBAMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eju-Gi-bQp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WWTBAM2" translatesAutoresizingMaskIntoConstraints="NO" id="z6j-W2-qaZ">
+                                        <rect key="frame" x="57" y="70" width="300" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="z6j-W2-qaZ" secondAttribute="height" multiplier="1:1" id="2My-Bq-Ucv"/>
+                                            <constraint firstAttribute="width" constant="300" id="IgS-1a-iUn"/>
+                                            <constraint firstAttribute="height" constant="300" id="QqS-c7-B0p"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGV-Gj-LR5">
+                                        <rect key="frame" x="30" y="430" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Whb-Oe-F0r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <state key="normal" title="Play The Game">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playTheGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dKl-9f-bWl"/>
+                                            <segue destination="doD-qp-b2R" kind="show" identifier="PlayTheGame" id="XFB-At-82E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQa-qr-2VX">
+                                        <rect key="frame" x="30" y="610" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="swm-3V-AE3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <state key="normal" title="See Results">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="j4Y-Jo-z4h" kind="show" identifier="SeeResults" id="TUI-Sl-Ohp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ0-FM-yrQ">
+                                        <rect key="frame" x="30" y="520" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="zw6-5Q-hkv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <state key="normal" title="Game Settings">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="9Yx-N5-BzC" kind="show" id="SPN-4Y-XdF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-bd-7tj">
+                                        <rect key="frame" x="30" y="700" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jiU-Dd-qDJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <state key="normal" title="Add Questions">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="T3i-wF-OcH" kind="show" id="ene-EP-0vv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cpC-bd-7tj" firstAttribute="leading" secondItem="eju-Gi-bQp" secondAttribute="leading" constant="30" id="1HI-UP-QmA"/>
+                                    <constraint firstAttribute="trailing" secondItem="cpC-bd-7tj" secondAttribute="trailing" constant="30" id="9Kq-eW-zYc"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZZ0-FM-yrQ" secondAttribute="trailing" constant="30" id="C8i-Jb-Fl0"/>
+                                    <constraint firstItem="z6j-W2-qaZ" firstAttribute="centerX" secondItem="eju-Gi-bQp" secondAttribute="centerX" id="DiK-vO-eaV"/>
+                                    <constraint firstItem="z6j-W2-qaZ" firstAttribute="top" secondItem="eju-Gi-bQp" secondAttribute="top" constant="70" id="JeT-Ih-Ees"/>
+                                    <constraint firstItem="yGV-Gj-LR5" firstAttribute="top" secondItem="z6j-W2-qaZ" secondAttribute="bottom" constant="60" id="Jjz-67-HTr"/>
+                                    <constraint firstItem="cpC-bd-7tj" firstAttribute="top" secondItem="qQa-qr-2VX" secondAttribute="bottom" constant="40" id="OUR-hS-cKO"/>
+                                    <constraint firstAttribute="trailing" secondItem="yGV-Gj-LR5" secondAttribute="trailing" constant="30" id="Sqf-rG-959"/>
+                                    <constraint firstItem="ZZ0-FM-yrQ" firstAttribute="top" secondItem="yGV-Gj-LR5" secondAttribute="bottom" constant="40" id="TZJ-1c-gvc"/>
+                                    <constraint firstItem="qQa-qr-2VX" firstAttribute="top" secondItem="ZZ0-FM-yrQ" secondAttribute="bottom" constant="40" id="UJS-cU-c8A"/>
+                                    <constraint firstItem="yGV-Gj-LR5" firstAttribute="leading" secondItem="eju-Gi-bQp" secondAttribute="leading" constant="30" id="gTM-oK-16W"/>
+                                    <constraint firstItem="yGV-Gj-LR5" firstAttribute="centerX" secondItem="eju-Gi-bQp" secondAttribute="centerX" id="hL2-We-byA"/>
+                                    <constraint firstAttribute="trailing" secondItem="qQa-qr-2VX" secondAttribute="trailing" constant="30" id="ifv-Nr-nf6"/>
+                                    <constraint firstItem="qQa-qr-2VX" firstAttribute="leading" secondItem="eju-Gi-bQp" secondAttribute="leading" constant="30" id="n8p-QJ-CJf"/>
+                                    <constraint firstAttribute="bottom" secondItem="cpC-bd-7tj" secondAttribute="bottom" constant="68" id="puO-Ri-yq0"/>
+                                    <constraint firstItem="ZZ0-FM-yrQ" firstAttribute="leading" secondItem="eju-Gi-bQp" secondAttribute="leading" constant="30" id="xel-Y7-UdY"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="V0X-GX-BDG"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="jWI-bt-sbZ"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.17645931240000001" green="0.14511489869999999" blue="0.3097619116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eju-Gi-bQp" secondAttribute="bottom" id="lar-VL-bK9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eju-Gi-bQp" secondAttribute="trailing" id="lxM-zM-V6R"/>
+                            <constraint firstItem="eju-Gi-bQp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mtu-Hf-2TJ"/>
+                            <constraint firstItem="eju-Gi-bQp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p2z-mF-l4G"/>
+                            <constraint firstItem="eju-Gi-bQp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q5p-IA-jCX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game Menu" id="fC2-9D-Pkf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="114"/>
+        </scene>
+        <!--The Game-->
+        <scene sceneID="eez-Yx-OyD">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="doD-qp-b2R" customClass="TheGameViewController" customModule="WWTBAMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pXH-LU-G9N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DS-Nw-vmM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionTextLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xC3-vc-tO4">
+                                        <rect key="frame" x="30" y="175.5" width="354" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="K5q-1A-Nvp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D33-Gf-sRh">
+                                        <rect key="frame" x="93" y="463.5" width="228" height="41"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        <state key="normal" title="FirstAnswerButton">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="firstAnswerButtonPressed:" destination="doD-qp-b2R" eventType="touchUpInside" id="dMq-6j-sCD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-J7-Tgt">
+                                        <rect key="frame" x="74" y="514.5" width="266" height="41"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        <state key="normal" title="SecondAnswerButton">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondAnswerButtonPressed:" destination="doD-qp-b2R" eventType="touchUpInside" id="ylZ-nS-yk5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdd-PB-nxK">
+                                        <rect key="frame" x="80.5" y="616.5" width="253" height="41"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        <state key="normal" title="FourthAnswerButton">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fourthAnswerButtonPressed:" destination="doD-qp-b2R" eventType="touchUpInside" id="kp8-FX-56v"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Win" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQI-lD-7Sh">
+                                        <rect key="frame" x="30" y="15" width="128.5" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKT-Dh-uNY">
+                                        <rect key="frame" x="89" y="565.5" width="236" height="41"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        <state key="normal" title="ThirdAnswerButton">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="thirdAnswerButtonPressed:" destination="doD-qp-b2R" eventType="touchUpInside" id="jWM-XT-ftC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKb-i1-sQQ">
+                                        <rect key="frame" x="255.5" y="46.5" width="128.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Possible Prize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh8-VT-cQV">
+                                        <rect key="frame" x="255.5" y="15" width="128.5" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WWTBAM2" translatesAutoresizingMaskIntoConstraints="NO" id="Ukb-dU-WwT">
+                                        <rect key="frame" x="178.5" y="15" width="57" height="57"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="7yl-Ib-Dkn"/>
+                                            <constraint firstAttribute="width" constant="57" id="MIg-Zl-GZO"/>
+                                            <constraint firstAttribute="width" secondItem="Ukb-dU-WwT" secondAttribute="height" multiplier="1:1" id="bQh-fA-nNb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STJ-aC-jev">
+                                        <rect key="frame" x="113.5" y="124.5" width="187.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                        <color key="textColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Z2-aK-2Wo">
+                                        <rect key="frame" x="146" y="150" width="122.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                        <color key="textColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose any answer to continue playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTH-vh-1WA">
+                                        <rect key="frame" x="65" y="435.5" width="284" height="18"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ir-y4-38z">
+                                        <rect key="frame" x="30" y="46.5" width="128.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                        <color key="textColor" systemColor="systemGreenColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strategy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9G-Ea-l6Z">
+                                        <rect key="frame" x="176" y="102" width="62" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If You want to stop the Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNK-mH-R8a">
+                                        <rect key="frame" x="102.5" y="697.5" width="209" height="18"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg9-F7-D2t">
+                                        <rect key="frame" x="48" y="725.5" width="318" height="29"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title=" Pick up your winnings $" image="hands.clap.fill" catalog="system">
+                                            <color key="titleColor" systemColor="systemGreenColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickUpYourWinningsButtonPressed:" destination="doD-qp-b2R" eventType="touchUpInside" id="0ZD-w6-cac"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ggO-J7-Tgt" firstAttribute="top" secondItem="D33-Gf-sRh" secondAttribute="bottom" constant="10" id="3Uc-ma-ava"/>
+                                    <constraint firstItem="sKT-Dh-uNY" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="4RY-dk-Bjk"/>
+                                    <constraint firstItem="q9G-Ea-l6Z" firstAttribute="top" secondItem="Ukb-dU-WwT" secondAttribute="bottom" constant="30" id="4ck-6w-QQw"/>
+                                    <constraint firstItem="STJ-aC-jev" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="9FO-Mu-HcB"/>
+                                    <constraint firstItem="5Ir-y4-38z" firstAttribute="leading" secondItem="1DS-Nw-vmM" secondAttribute="leading" constant="30" id="9ID-X7-Q37"/>
+                                    <constraint firstItem="hh8-VT-cQV" firstAttribute="centerX" secondItem="dKb-i1-sQQ" secondAttribute="centerX" id="9Ki-9y-pmI"/>
+                                    <constraint firstItem="Ukb-dU-WwT" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="9z3-di-nol"/>
+                                    <constraint firstItem="dKb-i1-sQQ" firstAttribute="bottom" secondItem="Ukb-dU-WwT" secondAttribute="bottom" id="ABy-o9-GOn"/>
+                                    <constraint firstItem="Wdd-PB-nxK" firstAttribute="top" secondItem="sKT-Dh-uNY" secondAttribute="bottom" constant="10" id="HcW-rK-5tm"/>
+                                    <constraint firstItem="xC3-vc-tO4" firstAttribute="leading" secondItem="1DS-Nw-vmM" secondAttribute="leading" constant="30" id="I02-LA-ipI"/>
+                                    <constraint firstItem="Wdd-PB-nxK" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="IUB-ry-cGo"/>
+                                    <constraint firstItem="LQI-lD-7Sh" firstAttribute="top" secondItem="1DS-Nw-vmM" secondAttribute="top" constant="15" id="KT1-VN-a6F"/>
+                                    <constraint firstItem="LQI-lD-7Sh" firstAttribute="centerX" secondItem="5Ir-y4-38z" secondAttribute="centerX" id="MxW-Jh-L87"/>
+                                    <constraint firstItem="xC3-vc-tO4" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="OCn-Y5-I92"/>
+                                    <constraint firstItem="Ukb-dU-WwT" firstAttribute="leading" secondItem="LQI-lD-7Sh" secondAttribute="trailing" constant="20" id="Qr3-sZ-O4b"/>
+                                    <constraint firstItem="4Z2-aK-2Wo" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="RLy-il-g1p"/>
+                                    <constraint firstItem="dKb-i1-sQQ" firstAttribute="leading" secondItem="Ukb-dU-WwT" secondAttribute="trailing" constant="20" id="SQV-Le-Isx"/>
+                                    <constraint firstItem="nTH-vh-1WA" firstAttribute="top" secondItem="xC3-vc-tO4" secondAttribute="bottom" constant="10" id="Sj3-op-P5s"/>
+                                    <constraint firstItem="sKT-Dh-uNY" firstAttribute="top" secondItem="ggO-J7-Tgt" secondAttribute="bottom" constant="10" id="WAo-oA-f2y"/>
+                                    <constraint firstItem="D33-Gf-sRh" firstAttribute="top" secondItem="nTH-vh-1WA" secondAttribute="bottom" constant="10" id="WnF-O7-vw7"/>
+                                    <constraint firstItem="Ukb-dU-WwT" firstAttribute="leading" secondItem="5Ir-y4-38z" secondAttribute="trailing" constant="20" id="XO0-Cu-8rI"/>
+                                    <constraint firstAttribute="trailing" secondItem="dKb-i1-sQQ" secondAttribute="trailing" constant="30" id="Zko-a2-ExL"/>
+                                    <constraint firstItem="nTH-vh-1WA" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="aXM-ea-SEi"/>
+                                    <constraint firstItem="tNK-mH-R8a" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="bO8-NA-X9g"/>
+                                    <constraint firstItem="xC3-vc-tO4" firstAttribute="top" secondItem="4Z2-aK-2Wo" secondAttribute="bottom" id="byp-W2-pBk"/>
+                                    <constraint firstItem="5Ir-y4-38z" firstAttribute="bottom" secondItem="Ukb-dU-WwT" secondAttribute="bottom" id="crM-1E-fBL"/>
+                                    <constraint firstItem="Ukb-dU-WwT" firstAttribute="top" secondItem="1DS-Nw-vmM" secondAttribute="top" constant="15" id="fgb-q5-U8R"/>
+                                    <constraint firstItem="tNK-mH-R8a" firstAttribute="top" secondItem="Wdd-PB-nxK" secondAttribute="bottom" constant="40" id="gV1-OS-3HW"/>
+                                    <constraint firstItem="4Z2-aK-2Wo" firstAttribute="top" secondItem="STJ-aC-jev" secondAttribute="bottom" id="h72-6p-325"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rg9-F7-D2t" secondAttribute="bottom" constant="50" id="hIo-ki-bhL"/>
+                                    <constraint firstItem="STJ-aC-jev" firstAttribute="top" secondItem="q9G-Ea-l6Z" secondAttribute="bottom" constant="5" id="lqT-qR-FFV"/>
+                                    <constraint firstItem="Rg9-F7-D2t" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="n7o-Xo-sv5"/>
+                                    <constraint firstItem="q9G-Ea-l6Z" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="nPn-Rc-uJE"/>
+                                    <constraint firstItem="hh8-VT-cQV" firstAttribute="leading" secondItem="Ukb-dU-WwT" secondAttribute="trailing" constant="20" id="na6-v6-UHy"/>
+                                    <constraint firstItem="Rg9-F7-D2t" firstAttribute="top" secondItem="tNK-mH-R8a" secondAttribute="bottom" constant="10" id="uPw-jE-S5H"/>
+                                    <constraint firstAttribute="trailing" secondItem="xC3-vc-tO4" secondAttribute="trailing" constant="30" id="udu-2p-lpW"/>
+                                    <constraint firstItem="ggO-J7-Tgt" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="uz4-FJ-G1S"/>
+                                    <constraint firstItem="hh8-VT-cQV" firstAttribute="top" secondItem="1DS-Nw-vmM" secondAttribute="top" constant="15" id="wua-nI-7bc"/>
+                                    <constraint firstItem="D33-Gf-sRh" firstAttribute="centerX" secondItem="1DS-Nw-vmM" secondAttribute="centerX" id="x3i-Vy-NOk"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="pdu-55-cKK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="J2k-yW-lW7"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FD0-eM-o7z"/>
+                        <color key="backgroundColor" red="0.17645931240000001" green="0.14511489869999999" blue="0.3097619116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1DS-Nw-vmM" firstAttribute="centerX" secondItem="FD0-eM-o7z" secondAttribute="centerX" id="7Jb-BU-Eh9"/>
+                            <constraint firstItem="1DS-Nw-vmM" firstAttribute="top" secondItem="FD0-eM-o7z" secondAttribute="top" id="FBh-ie-gQh"/>
+                            <constraint firstItem="1DS-Nw-vmM" firstAttribute="bottom" secondItem="FD0-eM-o7z" secondAttribute="bottom" id="RZf-bo-6Sf"/>
+                            <constraint firstItem="1DS-Nw-vmM" firstAttribute="trailing" secondItem="FD0-eM-o7z" secondAttribute="trailing" id="Ttg-6z-fZF"/>
+                            <constraint firstItem="1DS-Nw-vmM" firstAttribute="leading" secondItem="FD0-eM-o7z" secondAttribute="leading" id="wTX-xZ-v5i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="The Game" id="iml-QL-Agv"/>
+                    <connections>
+                        <outlet property="firstAnswerButton" destination="D33-Gf-sRh" id="GVs-2w-eaa"/>
+                        <outlet property="fourthAnswerButton" destination="Wdd-PB-nxK" id="6IO-n1-0HB"/>
+                        <outlet property="ifYouWantToStopTheGameLabel" destination="tNK-mH-R8a" id="kCF-6G-dMp"/>
+                        <outlet property="percentageLabel" destination="4Z2-aK-2Wo" id="zWM-cN-I5c"/>
+                        <outlet property="pickUpYourWinningsButton" destination="Rg9-F7-D2t" id="GS7-kw-kgL"/>
+                        <outlet property="possiblePrizeAmountLabel" destination="dKb-i1-sQQ" id="WCL-rD-gwV"/>
+                        <outlet property="questionNumberLabel" destination="STJ-aC-jev" id="Mc7-hm-aQh"/>
+                        <outlet property="questionTextLabel" destination="xC3-vc-tO4" id="WhN-0B-ABJ"/>
+                        <outlet property="secondAnswerButton" destination="ggO-J7-Tgt" id="moI-nn-iYL"/>
+                        <outlet property="strategyLabel" destination="q9G-Ea-l6Z" id="6fy-rs-vpW"/>
+                        <outlet property="thirdAnswerButton" destination="sKT-Dh-uNY" id="72N-eV-2W2"/>
+                        <outlet property="toContinueDescriptionLaber" destination="nTH-vh-1WA" id="x5P-UG-pqR"/>
+                        <outlet property="yourWinAmountLabel" destination="5Ir-y4-38z" id="fgS-mF-uO4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBt-ag-X7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-941"/>
+        </scene>
+        <!--Game Settings View Controller-->
+        <scene sceneID="GEy-ss-5yc">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="9Yx-N5-BzC" customClass="GameSettingsViewController" customModule="WWTBAMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mh7-UR-5vg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the Order of asking Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF7-Vp-sp6">
+                                <rect key="frame" x="55" y="74" width="304" height="20"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OX1-1s-z8T">
+                                <rect key="frame" x="53" y="791" width="308" height="41"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <state key="normal" title="Return to the Game Menu">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToTheGameMenuButtonPressed:" destination="9Yx-N5-BzC" eventType="touchUpInside" id="Yrl-B2-V8d"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lPv-ND-AbM">
+                                <rect key="frame" x="55" y="114" width="304" height="32"/>
+                                <color key="backgroundColor" red="0.24311777949999999" green="0.2235482335" blue="0.35289445520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Consistently"/>
+                                    <segment title="Shuffled"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.64308875799999998" green="0.60788291689999996" blue="0.77637606859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="wayOfAskingQuestionsSegmentControlSelect:" destination="9Yx-N5-BzC" eventType="valueChanged" id="bbN-Pw-O3Y"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Wd-gg-QMf"/>
+                        <color key="backgroundColor" red="0.17645931240000001" green="0.14511489869999999" blue="0.3097619116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lPv-ND-AbM" firstAttribute="trailing" secondItem="nF7-Vp-sp6" secondAttribute="trailing" id="Bkg-Gi-tpK"/>
+                            <constraint firstItem="lPv-ND-AbM" firstAttribute="leading" secondItem="nF7-Vp-sp6" secondAttribute="leading" id="C1L-zf-5vp"/>
+                            <constraint firstItem="nF7-Vp-sp6" firstAttribute="top" secondItem="8Wd-gg-QMf" secondAttribute="top" constant="30" id="LzO-Ik-q4e"/>
+                            <constraint firstItem="8Wd-gg-QMf" firstAttribute="bottom" secondItem="OX1-1s-z8T" secondAttribute="bottom" constant="30" id="N6V-HZ-jmf"/>
+                            <constraint firstItem="lPv-ND-AbM" firstAttribute="centerX" secondItem="8Wd-gg-QMf" secondAttribute="centerX" id="St2-q5-CMz"/>
+                            <constraint firstItem="OX1-1s-z8T" firstAttribute="centerX" secondItem="8Wd-gg-QMf" secondAttribute="centerX" id="eTd-5q-2tA"/>
+                            <constraint firstItem="nF7-Vp-sp6" firstAttribute="centerX" secondItem="8Wd-gg-QMf" secondAttribute="centerX" id="mA8-Ea-kx2"/>
+                            <constraint firstItem="lPv-ND-AbM" firstAttribute="top" secondItem="nF7-Vp-sp6" secondAttribute="bottom" constant="20" id="peg-AR-xmf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rRE-al-6r6"/>
+                    <connections>
+                        <outlet property="wayOfAskingQuestionsSegmentControl" destination="lPv-ND-AbM" id="g4X-lT-8s8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3h-gL-ylb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-248"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="guw-Q2-qee">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="j4Y-Jo-z4h" customClass="ResultsViewController" customModule="WWTBAMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xcB-d5-0cd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oc4-lR-Akc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="644"/>
+                                <color key="backgroundColor" red="0.17645931240000001" green="0.14511489869999999" blue="0.3097619116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-6J-zn6">
+                                <rect key="frame" x="102" y="791" width="210" height="41"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <state key="normal" title="Delete all Results">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAllResultsButtonPressed:" destination="j4Y-Jo-z4h" eventType="touchUpInside" id="GWc-CO-ZUq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="582-f4-Zdn">
+                                <rect key="frame" x="53" y="720" width="308" height="41"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <state key="normal" title="Return to the Game Menu">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToTheGameMenuButtonPressed:" destination="j4Y-Jo-z4h" eventType="touchUpInside" id="ahZ-Be-1oc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="krx-s4-wbR"/>
+                        <color key="backgroundColor" red="0.17645931240000001" green="0.14511489869999999" blue="0.3097619116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O4Z-6J-zn6" firstAttribute="top" secondItem="582-f4-Zdn" secondAttribute="bottom" constant="30" id="7kz-JU-CRI"/>
+                            <constraint firstItem="582-f4-Zdn" firstAttribute="centerX" secondItem="krx-s4-wbR" secondAttribute="centerX" id="80l-yy-qnR"/>
+                            <constraint firstItem="Oc4-lR-Akc" firstAttribute="leading" secondItem="krx-s4-wbR" secondAttribute="leading" id="IYI-hM-YjL"/>
+                            <constraint firstItem="Oc4-lR-Akc" firstAttribute="top" secondItem="krx-s4-wbR" secondAttribute="top" id="VFB-Yu-VLl"/>
+                            <constraint firstItem="582-f4-Zdn" firstAttribute="top" secondItem="Oc4-lR-Akc" secondAttribute="bottom" constant="32" id="WNB-eA-e8U"/>
+                            <constraint firstItem="krx-s4-wbR" firstAttribute="bottom" secondItem="O4Z-6J-zn6" secondAttribute="bottom" constant="30" id="c5r-Ii-ofc"/>
+                            <constraint firstItem="krx-s4-wbR" firstAttribute="trailing" secondItem="Oc4-lR-Akc" secondAttribute="trailing" id="mVZ-pR-Dz4"/>
+                            <constraint firstItem="O4Z-6J-zn6" firstAttribute="centerX" secondItem="krx-s4-wbR" secondAttribute="centerX" id="sTE-nA-tR6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Results" id="1zF-0q-dFM"/>
+                    <connections>
+                        <outlet property="tableView" destination="Oc4-lR-Akc" id="hUm-ov-BEm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAQ-Gt-LRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.73913043478262" y="445.98214285714283"/>
+        </scene>
+        <!--Add Questions View Controller-->
+        <scene sceneID="IbN-dK-lNI">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="T3i-wF-OcH" customClass="AddQuestionsViewController" customModule="WWTBAMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lz4-Fz-0av">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBu-B4-VdV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter the Text of the second Answer" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3HO-jE-geX">
+                                        <rect key="frame" x="30" y="282" width="354" height="42"/>
+                                        <color key="backgroundColor" red="0.24311777949999999" green="0.2235482335" blue="0.35289445520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="A3I-Lq-B6V"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jj5-fK-yBL">
+                                        <rect key="frame" x="30" y="30" width="354" height="150"/>
+                                        <color key="backgroundColor" red="0.24311777949999999" green="0.2235482335" blue="0.35289445520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="cmh-lm-CWJ"/>
+                                        </constraints>
+                                        <color key="textColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter the Text of the first Answer" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hWt-0L-9zN">
+                                        <rect key="frame" x="30" y="210" width="354" height="42"/>
+                                        <color key="backgroundColor" red="0.24311777949999999" green="0.2235482335" blue="0.35289445520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="hNC-qL-KW8"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter the Text of the third Answer" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vU4-Ix-Ptk">
+                                        <rect key="frame" x="30" y="354" width="354" height="42"/>
+                                        <color key="backgroundColor" red="0.24311777949999999" green="0.2235482335" blue="0.35289445520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="o7i-Wg-0KG"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-lB-bQs">
+                                        <rect key="frame" x="126.5" y="641" width="161" height="41"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        <state key="normal" title="Save and exit">
+                                            <color key="titleColor" systemColor="systemTealColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveAndExitButtonPressed:" destination="T3i-wF-OcH" eventType="touchUpInside" id="hM6-iC-jm4"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter the Text of the fourth Answer" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKg-NQ-Mh2">
+                                        <rect key="frame" x="30" y="426" width="354" height="42"/>
+                                        <color key="backgroundColor" red="0.24311777949999999" green="0.2235482335" blue="0.35289445520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="KJL-9f-shk"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter the Text of the correct Answer" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rqd-PC-zLR">
+                                        <rect key="frame" x="30" y="498" width="354" height="42"/>
+                                        <color key="backgroundColor" red="0.24311777949999999" green="0.2235482335" blue="0.35289445520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="LRO-cV-c6k"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="systemTealColor"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lc6-Np-dei">
+                                        <rect key="frame" x="54.5" y="712" width="305" height="36"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                        <state key="normal" title="Delete all User made Questions">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteAllUserMadeQuestionsButtonPressed:" destination="T3i-wF-OcH" eventType="touchUpInside" id="Nv9-C1-eAd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI5-yu-U59">
+                                        <rect key="frame" x="93.5" y="570" width="227" height="41"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        <state key="normal" title="Exit without saving">
+                                            <color key="titleColor" systemColor="systemGreenColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="returnToTheGameMenuButtonPressed:" destination="T3i-wF-OcH" eventType="touchUpInside" id="b1A-dF-fAV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jj5-fK-yBL" firstAttribute="leading" secondItem="lBu-B4-VdV" secondAttribute="leading" constant="30" id="05Q-S1-wbt"/>
+                                    <constraint firstItem="vU4-Ix-Ptk" firstAttribute="leading" secondItem="lBu-B4-VdV" secondAttribute="leading" constant="30" id="3qz-Eg-hCL"/>
+                                    <constraint firstItem="nI5-yu-U59" firstAttribute="centerX" secondItem="lBu-B4-VdV" secondAttribute="centerX" id="4Qe-Ne-PFV"/>
+                                    <constraint firstItem="nI5-yu-U59" firstAttribute="top" secondItem="Rqd-PC-zLR" secondAttribute="bottom" constant="30" id="5TS-Lm-avK"/>
+                                    <constraint firstAttribute="trailing" secondItem="vU4-Ix-Ptk" secondAttribute="trailing" constant="30" id="7xu-0U-mBj"/>
+                                    <constraint firstItem="lc6-Np-dei" firstAttribute="top" secondItem="IxN-lB-bQs" secondAttribute="bottom" constant="30" id="8GE-tw-bZb"/>
+                                    <constraint firstItem="IxN-lB-bQs" firstAttribute="top" secondItem="nI5-yu-U59" secondAttribute="bottom" constant="30" id="8Xy-tw-P68"/>
+                                    <constraint firstItem="3HO-jE-geX" firstAttribute="leading" secondItem="lBu-B4-VdV" secondAttribute="leading" constant="30" id="8s9-yg-Imd"/>
+                                    <constraint firstItem="hWt-0L-9zN" firstAttribute="leading" secondItem="lBu-B4-VdV" secondAttribute="leading" constant="30" id="H6G-vh-4A3"/>
+                                    <constraint firstItem="VKg-NQ-Mh2" firstAttribute="top" secondItem="vU4-Ix-Ptk" secondAttribute="bottom" constant="30" id="HNk-qg-I18"/>
+                                    <constraint firstAttribute="bottom" secondItem="lc6-Np-dei" secondAttribute="bottom" constant="60" id="KO0-HC-dhD"/>
+                                    <constraint firstItem="vU4-Ix-Ptk" firstAttribute="top" secondItem="3HO-jE-geX" secondAttribute="bottom" constant="30" id="L29-Uf-BAN"/>
+                                    <constraint firstAttribute="trailing" secondItem="VKg-NQ-Mh2" secondAttribute="trailing" constant="30" id="LcR-Hn-5a0"/>
+                                    <constraint firstItem="lc6-Np-dei" firstAttribute="centerX" secondItem="lBu-B4-VdV" secondAttribute="centerX" id="NhE-35-49V"/>
+                                    <constraint firstItem="jj5-fK-yBL" firstAttribute="centerX" secondItem="lBu-B4-VdV" secondAttribute="centerX" id="PYr-8t-Dav"/>
+                                    <constraint firstAttribute="trailing" secondItem="3HO-jE-geX" secondAttribute="trailing" constant="30" id="UW0-Ix-JV0"/>
+                                    <constraint firstItem="Rqd-PC-zLR" firstAttribute="top" secondItem="VKg-NQ-Mh2" secondAttribute="bottom" constant="30" id="ZfV-mX-MnU"/>
+                                    <constraint firstItem="Rqd-PC-zLR" firstAttribute="leading" secondItem="lBu-B4-VdV" secondAttribute="leading" constant="30" id="dJP-9B-ou1"/>
+                                    <constraint firstItem="IxN-lB-bQs" firstAttribute="centerX" secondItem="lBu-B4-VdV" secondAttribute="centerX" id="fkY-SW-13V"/>
+                                    <constraint firstItem="hWt-0L-9zN" firstAttribute="top" secondItem="jj5-fK-yBL" secondAttribute="bottom" constant="30" id="hUp-Pw-RD3"/>
+                                    <constraint firstItem="jj5-fK-yBL" firstAttribute="top" secondItem="lBu-B4-VdV" secondAttribute="top" constant="30" id="hfF-Po-Rwj"/>
+                                    <constraint firstItem="3HO-jE-geX" firstAttribute="top" secondItem="hWt-0L-9zN" secondAttribute="bottom" constant="30" id="iMY-pF-Pbs"/>
+                                    <constraint firstItem="VKg-NQ-Mh2" firstAttribute="leading" secondItem="lBu-B4-VdV" secondAttribute="leading" constant="30" id="mX4-hp-SbW"/>
+                                    <constraint firstAttribute="trailing" secondItem="hWt-0L-9zN" secondAttribute="trailing" constant="30" id="nh7-Ma-1QD"/>
+                                    <constraint firstAttribute="trailing" secondItem="jj5-fK-yBL" secondAttribute="trailing" constant="30" id="u1L-Tx-q3N"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rqd-PC-zLR" secondAttribute="trailing" constant="30" id="y5B-0b-SzN"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="71f-Cg-g3V"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="GT0-cp-hew"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W2b-I7-qfE"/>
+                        <color key="backgroundColor" red="0.17645931240000001" green="0.14511489869999999" blue="0.3097619116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lBu-B4-VdV" firstAttribute="top" secondItem="W2b-I7-qfE" secondAttribute="top" id="L9a-Ye-AGZ"/>
+                            <constraint firstItem="lBu-B4-VdV" firstAttribute="bottom" secondItem="W2b-I7-qfE" secondAttribute="bottom" id="X9g-zD-3mf"/>
+                            <constraint firstItem="lBu-B4-VdV" firstAttribute="leading" secondItem="W2b-I7-qfE" secondAttribute="leading" id="eg5-OL-yRe"/>
+                            <constraint firstItem="lBu-B4-VdV" firstAttribute="trailing" secondItem="W2b-I7-qfE" secondAttribute="trailing" id="sKI-9n-ZuE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wvp-XE-pxS"/>
+                    <connections>
+                        <outlet property="userMadeCorrectAnswerTextField" destination="Rqd-PC-zLR" id="Nkf-KE-HXD"/>
+                        <outlet property="userMadeFirstAnswerTextField" destination="hWt-0L-9zN" id="4dp-A0-VSG"/>
+                        <outlet property="userMadeFourthAnswerTextField" destination="VKg-NQ-Mh2" id="gfk-db-Huy"/>
+                        <outlet property="userMadeQuestionTextView" destination="jj5-fK-yBL" id="jaL-Fp-fM2"/>
+                        <outlet property="userMadeSecondAnswerTextField" destination="3HO-jE-geX" id="Dyx-sb-xGp"/>
+                        <outlet property="userMadeThirdAnswerTextField" destination="vU4-Ix-Ptk" id="Qon-VU-p9X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fm0-u5-7JJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.73913043478262" y="1147.7678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WWTBAM2" width="2400" height="2400"/>
+        <image name="hands.clap.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
